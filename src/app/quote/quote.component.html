@@ -2,9 +2,19 @@
 
 <ul>
   <div *ngFor="let quote of quotes; let i = index">
-      <li>{{quote.name}} posted {{quote.date | daysPassed}} days ago.</li>
-          <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+      <div class="row">
+          <div class="col-sm-8">
+              <li>{{quote.name}} posted {{quote.date | daysPassed}} days ago.</li>
+          </div>
+          <div class="col-sm-4">
+              <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+          </div>
+      </div>
+      <div class="row">
           <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
+      </div>
   </div>
   
 </ul>
+
+<app-quote-form></app-quote-form>
