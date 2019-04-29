@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote'
+import { globalAgent } from 'http';
 
 @Component({
   selector: 'app-quote',
@@ -12,6 +13,13 @@ export class QuoteComponent implements OnInit {
     new Quote(1,'It is better to be feared than loved, if you cannot be both.','Niccolo Machiavelli',88,9,new Date(2004,8,22)),
     new Quote(2,'The only true wisdom is in knowing you know nothing.','Ki',8,9,new Date(2019,3,29))
   ]
+
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id=quoteLength+1;
+    quote.date=new Date(quote.date);
+    this.quotes.push(quote);
+  }
 
   deleteQuote(isComplete, index){
     if (isComplete) {
