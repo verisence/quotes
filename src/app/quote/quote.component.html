@@ -2,7 +2,7 @@
 
 <ul>
   <div *ngFor="let quote of quotes; let i = index">
-      <li>{{quote.name}} posted on {{quote.date | date}}</li>
+      <li>{{quote.name}} posted {{quote.date | daysPassed}} days ago.</li>
           <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
           <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-details>
   </div>
