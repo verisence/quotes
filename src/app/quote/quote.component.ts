@@ -13,6 +13,10 @@ export class QuoteComponent implements OnInit {
     new Quote(2,'The only true wisdom is in knowing you know nothing.','Ki',8,9,new Date(2019,7,22))
   ]
 
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
   constructor() { }
 
   ngOnInit() {
