@@ -24,7 +24,7 @@
 
       <div class="form-group">
         <label for="posted">Date Posted</label>
-        <input type="date" name="date" id="posted" required [(ngModel)]="newQuote.date" #date="ngModel">
+        <input type="date" name="date" id="posted" required [(ngModel)]="newQuote.date" #date="ngModel" value="2009-11-07">
 
         <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
           <p>*Date Posted is Required</p>

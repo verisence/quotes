@@ -1,4 +1,18 @@
-<p>
-  {{quote.author}}
-</p>
-<button (click) = 'quoteDelete(true)' class="btn btn-danger">Delete</button>
+<div class="row" id="details">
+  <div class="col-sm-3">
+    <p>
+      by {{quote.author}}
+    </p>
+  </div>
+  <div class="col-sm-3">
+    <button (click) = 'quoteDelete(true)' class="btn btn-danger">Delete</button>
+  </div>
+  <div class="col-sm-3">
+    <button (click) = 'upVote(true)' class="btn btn-info" id="up">Upvote</button>
+  </div>  
+  <div class="col-sm-3">
+    <button (click) = 'downVote(true)' class="btn btn-warning" id="down">Downvote</button>
+  </div>
+
+</div>
+
