@@ -20,12 +20,15 @@ export class QuoteDetailsComponent implements OnInit {
     this.isComplete.emit(complete);
   }
 
-  upVote(i){
-    this.quote[i].upvotes +=1;
+  @Output() up = new EventEmitter<boolean>();
+  @Output() down = new EventEmitter<boolean>();
+
+  voteUp(add:boolean){
+    this.up.emit(add);
   }
 
-  downVote(i){
-    this.quote[i].downvotes -=1;
+  voteDown(subtract){
+    this.down.emit(subtract);
   }
 
 }

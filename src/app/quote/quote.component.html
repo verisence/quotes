@@ -1,22 +1,20 @@
 <div class="container">
     <h2>QUOTES</h2>
 
-    <ul>
       <div *ngFor="let quote of quotes; let i = index">
           <div class="row">
               <div class="col-sm-8">
-                  <li>{{quote.name}}. Posted {{quote.date | daysPassed}} days ago.</li>
+                  <div>{{quote.name}}. Posted {{quote.date | daysPassed}} days ago.</div>   
               </div>
               <div class="col-sm-4">
                   <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
               </div>
           </div>
           <div class="row">
-              <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
+              <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete) = 'deleteQuote($event,i)' (up) = 'upVote($event, i)' (down) = 'downVote($event, i)'></app-quote-details>
           </div>
       </div>
       
-    </ul>
     
     <div class="row">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
