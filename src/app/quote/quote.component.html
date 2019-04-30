@@ -4,7 +4,7 @@
       <div *ngFor="let quote of quotes; let i = index">
           <div class="row">
               <div class="col-sm-8">
-                  <div>{{quote.name}}. Posted {{quote.date | daysPassed}} days ago.</div>   
+                  <div appHighlight>{{quote.name}}. Posted {{quote.date | daysPassed}} days ago.</div>   
               </div>
               <div class="col-sm-4">
                   <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
