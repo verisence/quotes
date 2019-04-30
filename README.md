@@ -1,5 +1,29 @@
 # Quotes
+#### This is an angular app that allows the user to view quotes and upvote or downvote them and also add new quotes of their own.
+#### By **Phil Kipkemboi**
+## Description
 
+The user of the webpage views quotes displayed and can toggle more details of the quote such as the author and the number of votes. The user can then choose to upvote the quote or downvote it. The app also allows the user to add new quotes or delete existing ones.
+## BDD
+
+| Input                     | Behaviour                               | Output                                        |
+|---------------------------|-----------------------------------------|-----------------------------------------------|
+| code from index.html      | loads the webpage                       | the page with quotes is displayed to the user |
+| the toggle details button | loads the details of the quote          | more details on the quotes are shown          |
+| the delete button         | loads a confirmation prompt             | asks the user for confirmation of deletion    |
+| confirming "Ok"           | loads the function that deletes a quote | removes the deleted quote                     |
+| the upvote button         | loads the upVote function               | increments the upvotes on the screen          |
+| the downvote button       | loads the downVote function             | increments the downvotes on the screen        |
+| the quote form            | submits the information in the form     | displays the quote from the user              |
+
+## User Stories
+* As a user, I should be able to view quotes.
+* As a user, I should be able to view more details on the quote.
+* As a user, I should be able to upvote and downvote quotes.
+* As a user, I should be able to delete the quotes.
+* As a user, I should be able to add new quotes.
+
+### Setup/Installation
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server
@@ -25,3 +49,35 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Known Bugs
+No known bugs at the time.
+## Technologies Used
+HTML, JavaScript, CSS, Angular
+##Support and Contact Details
+Reach the developer at Kipkemboiphil@gmail.com
+
+### License
+
+*MIT License
+
+Copyright (c) [2019] [Phil Kipkemboi]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.*
+Copyright (c) 2019 **Kipkemboi Phil**
