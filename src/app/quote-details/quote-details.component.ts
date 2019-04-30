@@ -20,4 +20,12 @@ export class QuoteDetailsComponent implements OnInit {
     this.isComplete.emit(complete);
   }
 
+  upVote(i){
+    this.quote[i].upvotes +=1;
+  }
+
+  downVote(i){
+    this.quote[i].downvotes -=1;
+  }
+
 }
